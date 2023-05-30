@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Accordion, AccordionSummary, AccordionDetails, Typography, Link, Tooltip } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import Box from '@mui/material/Box';
 
 const projects = [
     {
@@ -15,7 +16,7 @@ const projects = [
         link: 'https://github.com/lukeschlosser/URBN-Project'
     },
     {
-        title: 'Comic Book Collection Application',
+        title: 'Comic Collection Application',
         description: 'In collaboration with three of my classmates at Tech Elevator, as our Capstone Project we developed a comprehensive full stack application utilizing Java, PostgreSQL, and Vue.js. The project revolves around consuming the Marvel API, enabling users to curate their own comic book collections by adding or removing comics as desired.',
         link: 'https://github.com/lukeschlosser/Final-Project'
     },
@@ -32,7 +33,20 @@ const projects = [
     // Add more projects here...
 ];
 
+const GitHubLink = ({ link }) => (
+    <Box display="flex" alignItems="center" gap={1}>
+      <GitHubIcon />
+      <Typography variant="body2" style={{paddingTop: '3px'}}>Explore on GitHub</Typography>
+    </Box>
+  );
+
 const Projects = () => {
+    const [expanded, setExpanded] = useState('');
+
+    const handleChange = (panel) => (event, isExpanded) => {
+        setExpanded(isExpanded ? panel : false);
+    };
+
     return (
         <div id="projects" style={{ position: 'relative', minHeight: '500px', padding: '50px'}}>
             <video 
@@ -53,19 +67,19 @@ const Projects = () => {
             >
                 <source src="/projectsVideoAsset.mp4" type="video/mp4" />
             </video>
-            <h1 style={{ color: 'white' }}>My Projects</h1>
+            <h1 style={{ color: 'white' }}>Projects</h1>
             {projects.map((project, index) => (
-                <Accordion key={index} sx={{ opacity: 0.9, backgroundColor: 'lightgrey' }}>
+                <Accordion key={index} sx={{ opacity: 0.9, backgroundColor: 'lightgrey' }} expanded={expanded === index} onChange={handleChange(index)}>
                     <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                         <Typography variant='h6' fontWeight="bold">{project.title}</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                        <Link href={project.link} target="_blank" rel="noopener noreferrer">
-                            <Tooltip title="Check it out on GitHub" placement='right'>
-                                <GitHubIcon/>
-                            </Tooltip>
-                        </Link>
-                        <Typography>{project.description}</Typography>
+                        <Box display="flex" flexDirection="column" gap={1}>
+                            <Link href={project.link} target="_blank" rel="noopener noreferrer">
+                                <GitHubLink link={project.link} />
+                            </Link>
+                            <Typography>{project.description}</Typography>
+                        </Box>
                     </AccordionDetails>
                 </Accordion>
             ))}

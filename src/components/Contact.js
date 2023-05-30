@@ -42,7 +42,7 @@ const StyledText = styled(Typography)({
 const Contact = () => {
   return (
     <Box id="contact" minHeight="400px" padding="50px">
-      <h1 style={{ textAlign: 'center', color: 'Black' }}>Contact Me</h1>
+      <h1 style={{ textAlign: 'center', color: 'Black' }}>Contact</h1>
       <StyledBox>
         <StyledLink href="https://www.linkedin.com/in/lukeschlosser/" target="_blank" rel="noopener noreferrer">
           <StyledIconContainer>
