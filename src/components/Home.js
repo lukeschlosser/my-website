@@ -17,7 +17,7 @@ const Home = () => {
     };
 
     return (
-        <div id="home" style={{ minHeight: '700px', padding: '50px' }}>
+        <div id="home" style={{ minHeight: '700px', paddingTop: matches ? '27px' : '50px', paddingRight: '50px', paddingBottom: '50px', paddingLeft: '50px' }}>
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'left' }}>
                 <Box sx={{ paddingRight: matches ? '0px' : '20px' }}>
                     <Typography variant={matches ? "h3" : "h1"} style={{ fontSize: 'clamp(1.9rem, 5vw, 9rem)' }}>J. Luke Schlosser</Typography>
