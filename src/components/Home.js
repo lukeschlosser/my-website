@@ -17,12 +17,37 @@ const Home = () => {
     };
 
     return (
-        <div id="home" style={{ minHeight: '700px', paddingTop: matches ? '27px' : '50px', paddingRight: '50px', paddingBottom: '50px', paddingLeft: '50px' }}>
+        <Box 
+            role="main" 
+            id="home" 
+            aria-label="home" 
+            style={{ 
+                minHeight: '700px', 
+                paddingTop: matches ? '27px' : '50px', 
+                paddingRight: '50px', 
+                paddingBottom: '50px', 
+                paddingLeft: '50px' 
+            }}
+        >
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'left' }}>
                 <Box sx={{ paddingRight: matches ? '0px' : '20px' }}>
-                    <Typography variant={matches ? "h3" : "h1"} style={{ fontSize: 'clamp(1.9rem, 5vw, 9rem)' }}>J. Luke Schlosser</Typography>
-                    <Typography variant="h5" sx={{ opacity: 0.6, fontSize: 'clamp(0.9rem, 2.2vw, 4rem)' }}>- Software Engineer</Typography>
-
+                    <Typography 
+                        variant={matches ? "h3" : "h1"} 
+                        style={{ fontSize: 'clamp(1.9rem, 5vw, 9rem)' }} 
+                        aria-label="header"
+                    >
+                        J. Luke Schlosser
+                    </Typography>
+                    <Typography 
+                        variant="h5" 
+                        sx={{ 
+                            opacity: 0.6, 
+                            fontSize: 'clamp(0.9rem, 2.2vw, 4rem)' 
+                        }} 
+                        aria-label="subheader"
+                    >
+                        - Software Engineer
+                    </Typography>
                 </Box>
                 <Box
                     sx={{
@@ -36,8 +61,9 @@ const Home = () => {
                         alignItems: 'center',
                         justifyContent: 'space-between'
                     }}
+                    aria-label="content-box"
                 >
-                    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+                    <Box sx={{ display: 'flex', flexDirection: 'column' }} aria-label="content-text-box">
                         <Typography variant="body1">
                             *In my best Obi-Wan voice* Hello there! I'm Luke, a Software Engineer with a growing toolbox – favorites being Python, Javascript, React, SQL and AWS. I delight in creating code that's not just useful, but also fun to use. I'm a graduate of Tech Elevator and I have my AWS Certified Cloud Practitioner badge. I thrive on unraveling the complexities of backend code and equally enjoy the artistic license that frontend development offers. For me, the best part is when tech and imagination cross paths. Nothing beats that "Aha" moment!
                         </Typography>
@@ -52,12 +78,13 @@ const Home = () => {
                             marginBottom: matches ? '20px' : '0px',
                             opacity: 1 // Remove opacity from the image
                         }}
+                        aria-label="image-box"
                     >
                         <img src="/myImage.jpg" alt="Luke Schlosser" style={imageStyle} />
                     </Box>
                 </Box>
             </Box>
-        </div>
+        </Box>
     );
 };
 

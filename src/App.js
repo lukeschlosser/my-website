@@ -8,33 +8,33 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
-  components: {
-    MuiCssBaseline: {
-      styleOverrides: {
-        body: {
-          backgroundImage: `url('backgroundImage.jpg')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+    components: {
+        MuiCssBaseline: {
+        styleOverrides: {
+            body: {
+            backgroundImage: `url('backgroundImage.jpg')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            },
         },
-      },
+        },
     },
-  },
-  typography: {
-    fontFamily: '"Nunito", sans-serif',
-  },
+    typography: {
+        fontFamily: '"Nunito", sans-serif',
+    },
 });
 
 function App() {
-  return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Navbar />
-      <Home />
-      <Projects />
-      <Contact />
-      <Footer />
-    </ThemeProvider>
-  );
+    return (
+        <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Navbar />
+        <Home />
+        <Projects />
+        <Contact />
+        <Footer />
+        </ThemeProvider>
+    );
 }
 
 export default App;

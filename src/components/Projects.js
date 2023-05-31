@@ -36,14 +36,15 @@ const projects = [
         link: 'https://github.com/lukeschlosser/my-website-main'
     },
     // Add more projects here...
+    // Update Projects.tests.js when new projects are added
 ];
 
 const GitHubLink = ({ link }) => (
     <Box display="flex" alignItems="center" gap={1}>
-      <GitHubIcon />
-      <Typography variant="body2" style={{paddingTop: '3px'}}>Explore on GitHub</Typography>
+        <GitHubIcon aria-label="GitHub Icon" />
+        <Typography variant="body2" style={{paddingTop: '3px'}}>Explore on GitHub</Typography>
     </Box>
-  );
+);
 
 const Projects = () => {
     const [expanded, setExpanded] = useState('');
@@ -53,7 +54,7 @@ const Projects = () => {
     };
 
     return (
-        <div id="projects" style={{ position: 'relative', minHeight: '500px', padding: '50px'}}>
+        <Box role="complementary" id="projects" style={{ position: 'relative', minHeight: '500px', padding: '50px'}} aria-label='Projects'>
             <video 
                 autoPlay
                 loop
@@ -74,21 +75,27 @@ const Projects = () => {
             </video>
             <h1 style={{ color: 'white' }}>Projects</h1>
             {projects.map((project, index) => (
-                <Accordion key={index} sx={{ opacity: 0.9, backgroundColor: 'lightgrey' }} expanded={expanded === index} onChange={handleChange(index)}>
+                <Accordion 
+                    key={index} 
+                    sx={{ opacity: 0.9, backgroundColor: 'lightgrey' }} 
+                    expanded={expanded === index} 
+                    onChange={handleChange(index)} 
+                    aria-label={`Accordion ${index}`}
+                >
                     <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                         <Typography variant='h6' fontWeight="bold">{project.title}</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                         <Box display="flex" flexDirection="column" gap={1}>
-                            <Link href={project.link} target="_blank" rel="noopener noreferrer">
-                                <GitHubLink link={project.link} />
-                            </Link>
-                            <Typography>{project.description}</Typography>
+                        <Link href={project.link} target="_blank" rel="noopener noreferrer">
+                            <GitHubLink link={project.link} />
+                        </Link>
+                        <Typography>{project.description}</Typography>
                         </Box>
                     </AccordionDetails>
                 </Accordion>
             ))}
-        </div>
+        </Box>
     )
 }
 
