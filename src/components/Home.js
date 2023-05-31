@@ -7,12 +7,12 @@ const Home = () => {
     const matches = useMediaQuery(theme => theme.breakpoints.down('sm'));
     const matches900 = useMediaQuery('(max-width:900px)');
 
-    const imageSize = matches ? '250px' : '350px'; // Change as needed
+    const imageSize = matches ? '250px' : '350px';
     const imageStyle = { 
         width: 'auto', 
         height: 'auto', 
         maxWidth: imageSize, 
-        minWidth: '100px', // Change as needed
+        minWidth: '100px',
         maxHeight: imageSize
     };
 
@@ -27,7 +27,7 @@ const Home = () => {
                 <Box
                     sx={{
                         border: '2px solid darkgrey',
-                        backgroundColor: 'rgba(211, 211, 211, 0.6)', // Updated background color with opacity
+                        backgroundColor: 'rgba(211, 211, 211, 0.6)',
                         padding: '10px',
                         borderRadius: '5px',
                         marginTop: '20px',

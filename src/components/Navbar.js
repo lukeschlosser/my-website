@@ -49,7 +49,7 @@ const Navbar = () => {
 {isMobile && (
         <SpeedDial
           ariaLabel="SpeedDial menu"
-          icon={speedDialOpen ? <MoreHorizIcon /> : <MenuIcon />} // Swap positions of MenuIcon and MoreVertIcon
+          icon={speedDialOpen ? <MoreHorizIcon /> : <MenuIcon />}
           onClose={handleSpeedDialClose}
           onOpen={handleSpeedDialOpen}
           open={speedDialOpen}

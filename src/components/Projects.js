@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 const projects = [
     {
         title: 'Thrive API',
-        description: 'Thrive (Work in Progress) is an ongoing project aimed at building an efficient HR API for managing employee performance reviews. The application encompasses various features such as goal setting, feedback collection, review scheduling, and reporting. Built using Elixir, Phoenix, and PostgreSQL, Thrive aims to streamline and enhance the performance tracking process within organizations.',
+        description: 'Thrive (Work in Progress) is an ongoing project aimed at building an efficient HR API for managing employee performance reviews. This Project started as a way to familiarize myself with Elixir and Phoenix. The application encompasses various features such as goal setting, feedback collection, review scheduling, and reporting. Built using Elixir, Phoenix, and PostgreSQL, Thrive aims to streamline and enhance the performance tracking process within organizations.',
         link: 'https://github.com/lukeschlosser/Thrive---Performance-Tracking-API'
     },
     {
@@ -29,6 +29,11 @@ const projects = [
         title: 'Vending Machine Software',
         description: 'Our first project at Tech Elevator involved developing a Java-based application for a vending machine. This software enables customers to view available items, make purchases, and provides the vending machine owner with sales tracking and reporting capabilities accessible through a hidden menu.',
         link: 'https://github.com/lukeschlosser/Project1'
+    },
+    {
+        title: 'Portfolio Website',
+        description: "The source code for this very website that you're currently viewing. Built with React and utilizing AWS services such as Amplify and Route 53, my goal was to craft an online space that encapsulates who I am and what I do. This platform serves not only as a showcase of the projects I've been diligently working on, but also as an accessible avenue for contacting me, and a hub where you can view or download my resume at your convenience.",
+        link: 'https://github.com/lukeschlosser/my-website-main'
     },
     // Add more projects here...
 ];
