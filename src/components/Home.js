@@ -46,7 +46,7 @@ const Home = () => {
                         }} 
                         aria-label="subheader"
                     >
-                        - Software Engineer
+                        - Software & Solutions Enthusiast
                     </Typography>
                 </Box>
                 <Box
@@ -65,10 +65,13 @@ const Home = () => {
                 >
                     <Box sx={{ display: 'flex', flexDirection: 'column' }} aria-label="content-text-box">
                         <Typography variant="body1">
-                            *In my best Obi-Wan voice* Hello there! I'm Luke, a Software Engineer with a growing toolbox – favorites being Python, Javascript, React, SQL and AWS. I delight in creating code that's not just useful, but also fun to use. I'm a graduate of Tech Elevator and I have my AWS Certified Cloud Practitioner badge. I thrive on unraveling the complexities of backend code and equally enjoy the artistic license that frontend development offers. For me, the best part is when tech and imagination cross paths. Nothing beats that "Aha" moment!
+                            *In my best Obi-Wan voice* Hello there! I'm Luke, I'm Luke, a tech enthusiast with an ever-expanding toolbox of skills and a knack for bridging the gap between tech and people. My favorites? Python, JavaScript, React, SQL, and AWS. I'm not just a Tech Elevator graduate and an AWS Certified Cloud Practitioner, but also a seasoned professional in medical sales.
                         </Typography>
                         <Typography variant="body1" sx={{paddingTop: '15px'}}>
-                            I love being a dada and husband, getting creative in the kitchen, keeping fit, diving into cool board or video games, and staying up-to-date with the latest advancements in technology.
+                            This unique blend of tech savvy and customer-facing experience has given me a well-rounded perspective. I excel in translating intricate backend code into intuitive, user-friendly solutions. The creative liberty of frontend equally captivates me. Nothing beats that "Aha" moment when coding or the appreciation of a satisfied end user.
+                        </Typography>
+                        <Typography variant="body1" sx={{paddingTop: '15px'}}>
+                            Outside of work, I fully embrace my roles as a husband and dada, and love getting creative in the kitchen. I also enjoy diving into the next engrossing video or board game, and I continually engage with the ever-evolving world of technological advancements.
                         </Typography>
                     </Box>
                     <Box
